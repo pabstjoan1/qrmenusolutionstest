@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QRMenu Solutions - Die Zukunft der Gastronomie</title>
+    <meta name="description" content="Digitale QR-Speisekarte mit Bestellung, Bezahlung und Kellner-Ruf – im Design Ihres Restaurants. Keine App nötig.">
+    <meta name="theme-color" content="#060606">
+    <link rel="icon" href="logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div id="intro-screen">
+        <img src="logo.png" alt="QRMenu Solutions" class="intro-logo">
+    </div>
+
+    <header id="header">
+        <a href="#home" class="logo-link">
+            <img src="logo.png" alt="QRMenu Logo" class="logo-img">
+        </a>
+        <nav id="nav-menu">
+            <a href="#home">Home</a>
+            <a href="#funktionen">Funktionen</a>
+            <a href="#vorteile">Vorteile</a>
+            <a href="#design">Ihr Design</a>
+            <a href="#preise">Preise</a>
+            <a href="#ueber-mich">Über mich</a>
+            <a href="#faq">FAQ</a>
+            <a href="#" class="nav-btn open-modal-btn">Kontakt</a>
+        </nav>
+        <button class="menu-toggle" id="mobile-menu" aria-label="Menü öffnen" aria-expanded="false" style="background:none;border:0"><i class="fas fa-bars"></i></button>
+    </header>
+
+    <section id="home" class="hero fade-in">
+        <div class="hero-content">
+            <span class="eyebrow"><i class="fas fa-qrcode"></i> Digitale Speisekarte für Restaurants</span>
+            <h1>Die Zukunft der<br><span class="brand-color">Gastronomie</span> <span style="white-space:nowrap">beginnt hier</span></h1>
+            <p>Entlasten Sie Ihre Mitarbeiter, begeistern Sie Ihre Gäste und steigern Sie Ihre Effizienz – mit einem QR-Code-System, das genau zu Ihrem Restaurant passt.</p>
+            <div class="hero-buttons">
+                <a href="#" class="btn-primary open-modal-btn">Jetzt Anfragen</a>
+                <a href="#vorteile" class="btn-outline">Mehr Erfahren</a>
+            </div>
+
+            <p class="feature-hint">Klicken Sie auf ein Feature, um zu sehen wie es funktioniert:</p>
+            <div class="hero-icons" role="tablist" aria-label="Funktionen">
+                <button class="icon-item active" data-feature="speisekarte" role="tab"><i class="fas fa-book-open"></i><span>Speisekarte aufrufen</span></button>
+                <button class="icon-item" data-feature="bestellen" role="tab"><i class="fas fa-shopping-cart"></i><span>Bestellen</span></button>
+                <button class="icon-item" data-feature="bezahlen" role="tab"><i class="fas fa-credit-card"></i><span>Bezahlen</span></button>
+                <button class="icon-item" data-feature="kellner" role="tab"><i class="fas fa-bell"></i><span>Kellner rufen</span></button>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <!-- Platzhalter für die spätere Produktvorschau: einfach produkt-demo.mp4 neben die index.html legen -->
+            <div class="mockup-video-container">
+                <div class="phone-placeholder">
+                    <img src="logo.png" alt="">
+                    <strong>Produktvorschau</strong>
+                    <span>Hier sehen Sie bald Ihre digitale Speisekarte in Aktion.</span>
+                    <span class="pv-label" id="preview-label">Speisekarte aufrufen</span>
+                </div>
+                <video autoplay loop muted playsinline class="hero-video">
+                    <source src="produkt-demo.mp4" type="video/mp4" onerror="this.parentElement.style.display='none'">
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <div class="trust-strip">
+        <span><i class="fas fa-mobile-screen"></i> Keine App für Gäste nötig</span>
+        <span><i class="fas fa-bolt"></i> Änderungen in Sekunden live</span>
+        <span><i class="fas fa-palette"></i> Im Design Ihres Restaurants</span>
+        <span><i class="fas fa-server"></i> Hosting inklusive</span>
+    </div>
+
+    <section id="funktionen" class="features-explain fade-in">
+        <p class="section-subtitle">Unser System im Detail</p>
+        <h2>So funktioniert es</h2>
+
+        <div class="hero-icons" role="tablist" aria-label="Funktionen im Detail">
+            <button class="icon-item active" data-feature="speisekarte" role="tab"><i class="fas fa-book-open"></i><span>Speisekarte</span></button>
+            <button class="icon-item" data-feature="bestellen" role="tab"><i class="fas fa-shopping-cart"></i><span>Bestellen</span></button>
+            <button class="icon-item" data-feature="bezahlen" role="tab"><i class="fas fa-credit-card"></i><span>Bezahlen</span></button>
+            <button class="icon-item" data-feature="kellner" role="tab"><i class="fas fa-bell"></i><span>Kellner rufen</span></button>
+        </div>
+
+        <div class="feature-display-box">
+            <div id="feature-speisekarte" class="feature-tab-content active">
+                <h3><i class="fas fa-book-open brand-color"></i> Digitale Speisekarte</h3>
+                <p>Ihre Gäste scannen den QR-Code auf dem Tisch und sehen sofort Ihre Speisekarte auf ihrem Smartphone. Keine App-Installation notwendig! Änderungen an Preisen oder Gerichten können Sie in Sekundenschnelle live schalten.</p>
+            </div>
+            <div id="feature-bestellen" class="feature-tab-content">
+                <h3><i class="fas fa-shopping-cart brand-color"></i> Direkt am Tisch bestellen</h3>
+                <p>Schluss mit langen Wartezeiten. Gäste wählen ihre Lieblingsgerichte direkt über ihr Smartphone aus und senden die Bestellung ab. Die Bestellung landet ohne Umwege sofort in der Küche oder an der Theke.</p>
+            </div>
+            <div id="feature-bezahlen" class="feature-tab-content">
+                <h3><i class="fas fa-credit-card brand-color"></i> Kontaktlos bezahlen</h3>
+                <p>Einfach, schnell und sicher. Nach dem Essen können die Gäste ihre Rechnung direkt digital per Apple Pay, Google Pay, Kreditkarte oder PayPal begleichen. Das entlastet Ihr Personal enorm zu Stoßzeiten.</p>
+            </div>
+            <div id="feature-kellner" class="feature-tab-content">
+                <h3><i class="fas fa-bell brand-color"></i> Kellner-Rufsystem</h3>
+                <p>Sollte ein Gast doch einmal eine persönliche Beratung wünschen oder ein zusätzliches Besteck benötigen, reicht ein Klick auf dem Smartphone. Ihr Servicepersonal erhält sofort ein unaufdringliches Signal mit der Tischnummer.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="vorteile" class="vorteile fade-in">
+        <div class="section-header">
+            <p class="section-subtitle">Warum QRMenu Solutions?</p>
+            <h2>Vorteile für Ihr Restaurant</h2>
+        </div>
+        <div class="vorteile-grid">
+            <div class="vorteil-item">
+                <div class="vorteil-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Mehr Effizienz</h3>
+                <p>Kellner werden von lästigen Laufwegen entlastet und können sich ganz auf exzellente Gastfreundschaft konzentrieren.</p>
+            </div>
+            <div class="vorteil-item">
+                <div class="vorteil-icon"><i class="fas fa-clock"></i></div>
+                <h3>Schnellere Abläufe</h3>
+                <p>Gäste bestellen direkt am Tisch, ohne auf den Service zu warten. Das optimiert die Tischbelegung und verkürzt Wartezeiten.</p>
+            </div>
+            <div class="vorteil-item">
+                <div class="vorteil-icon"><i class="fas fa-chart-line"></i></div>
+                <h3>Höherer Umsatz</h3>
+                <p>Durch clevere digitale Zusatzempfehlungen (Cross-Selling) direkt im Bestellprozess steigt der durchschnittliche Bon-Wert.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="design" class="design fade-in">
+        <div class="design-wrap">
+            <div class="design-text">
+                <p class="section-subtitle">Individuelles Design</p>
+                <h2>Nicht von der Stange.<br>Sondern <span class="brand-color">Ihr Restaurant</span>.</h2>
+                <p>Jedes Restaurant hat seine eigene Handschrift. Deshalb bekommt Ihre digitale Speisekarte keine Einheitsgestaltung, sondern wird an Ihr Erscheinungsbild angepasst.</p>
+                <div class="design-points">
+                    <div class="design-point"><i class="fas fa-droplet"></i><h3>Ihre Farben</h3><p>Individuelle Farben passend zu Ihrem Restaurant und Ihrem Corporate Design.</p></div>
+                    <div class="design-point"><i class="fas fa-stamp"></i><h3>Ihr Branding</h3><p>Das Erscheinungsbild wird an die Marke Ihres Restaurants angepasst.</p></div>
+                    <div class="design-point"><i class="fas fa-table-cells-large"></i><h3>Klar & modern</h3><p>Eine übersichtliche digitale Speisekarte, die zu Ihrem Haus passt.</p></div>
+                    <div class="design-point"><i class="fas fa-handshake"></i><h3>Nach Absprache</h3><p>Persönliche Designwünsche besprechen wir gemeinsam mit Ihnen.</p></div>
+                </div>
+                <a href="#" class="btn-primary open-modal-btn">Design anfragen</a>
+            </div>
+            <div class="design-demo">
+                <div class="theme-chips" id="theme-chips" aria-label="Beispiel-Designs"></div>
+                <div class="mini-phone" id="mini-phone">
+                    <div class="mini-head"><strong id="mp-name"></strong><span id="mp-tag"></span></div>
+                    <div class="mini-body" id="mp-items"></div>
+                </div>
+                <p class="demo-note">Beispielhafte Darstellung – Ihr Design entsteht individuell nach Absprache.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="preise" class="pricing fade-in">
+        <div class="section-header">
+            <p class="section-subtitle">Transparente Preise</p>
+            <h2>Faire Preise. Klare Leistung.</h2>
+        </div>
+        <div class="pricing-grid">
+
+            <div class="price-card">
+                <div class="card-header">
+                    <span class="badge">Komplettsystem</span>
+                    <div class="price">500 €</div>
+                    <span class="period">Einmalige Gebühr</span>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check brand-color"></i> Komplette Einrichtung des Systems</li>
+                        <li><i class="fas fa-check brand-color"></i> Individuelle Design-Anpassung</li>
+                        <li><i class="fas fa-check brand-color"></i> Druckfertige QR-Code-Erstellung</li>
+                        <li><i class="fas fa-check brand-color"></i> Vollständige digitale Speisekarte</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn-primary open-modal-btn">Jetzt Anfragen</a>
+                </div>
+            </div>
+
+            <div class="price-card highlighted">
+                <div class="recommended-tag">Empfohlen</div>
+                <div class="card-header">
+                    <span class="badge">Betreuung</span>
+                    <div class="price">70 €</div>
+                    <span class="period">Pro Monat</span>
+                </div>
+                <div class="card-body">
+                    <ul>
+                        <li><i class="fas fa-check brand-color"></i> Zuverlässiger, laufender Systembetrieb</li>
+                        <li><i class="fas fa-check brand-color"></i> Priorisierter technischer Support</li>
+                        <li><i class="fas fa-check brand-color"></i> Regelmäßige Updates &amp; Kontrollen</li>
+                        <li><i class="fas fa-check brand-color"></i> Hosting inklusive</li>
+                    </ul>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn-primary open-modal-btn">Jetzt Anfragen</a>
+                </div>
+            </div>
+
+            <div class="price-card">
+                <div class="card-header">
+                    <span class="badge">Anpassungen</span>
+                    <div class="price">45 €</div>
+                    <span class="period">Pro Änderung</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">Für jede nachträgliche, individuelle Ausbesserung oder Speisekarten-Erweiterung, die flexibel von unserem Team außerhalb des Wartungsvertrags durchgeführt werden soll.</p>
+                </div>
+                <div class="card-footer">
+                    <a href="#" class="btn-outline open-modal-btn">Jetzt Anfragen</a>
+                </div>
+            </div>
+
+        </div>
+        <p class="pricing-note">Noch Fragen zu den Preisen? Schauen Sie in die <a href="#faq">FAQ</a> oder fragen Sie unverbindlich an.</p>
+    </section>
+
+    <section id="ueber-mich" class="about fade-in">
+        <div class="about-container">
+            <div class="about-image">
+                <img src="elias-joerg.jpg" alt="Elias Jörg, Gründer von QRMenu Solutions" class="founder-photo" width="1086" height="1448" loading="lazy">
+            </div>
+            <div class="about-content">
+                <p class="section-subtitle" style="text-align:left">Über mich</p>
+                <h2>Ein System. Eine Vision.</h2>
+                <p>Mein Name ist <strong>Elias Jörg</strong> und ich bin Gründer von QRMenu Solutions. Meine Mission ist es, Gastronomiebetrieben moderne digitale Werkzeuge an die Hand zu geben, die den Service revolutionieren.</p>
+
+                <div class="signature">Elias Jörg</div>
+
+                <div class="contact-box-simple">
+                    <div class="c-info"><i class="fas fa-map-marker-alt brand-color"></i> <span>Münster</span></div>
+                    <div class="c-info"><i class="fas fa-envelope brand-color"></i> <a href="mailto:qrmenusolutions1@gmail.com">qrmenusolutions1@gmail.com</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="faq" class="faq fade-in">
+        <div class="section-header">
+            <p class="section-subtitle">Häufige Fragen</p>
+            <h2>Gut zu wissen, bevor Sie anfragen</h2>
+        </div>
+        <div class="faq-list">
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Wie funktioniert das QR-Menü-System? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Auf jedem Tisch befindet sich ein QR-Code. Ihre Gäste scannen ihn mit der Kamera ihres Smartphones und sehen sofort Ihre digitale Speisekarte. Von dort aus können sie bestellen, bezahlen oder den Kellner rufen – die Bestellung landet direkt in der Küche oder an der Theke.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Benötigen meine Gäste eine App? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Nein. Es ist keine App-Installation notwendig. Der QR-Code genügt, um die Speisekarte auf dem eigenen Smartphone zu öffnen.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Kann das Design an mein Restaurant angepasst werden? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Ja. Farben und Erscheinungsbild werden an Ihr Restaurant und Ihr Branding angepasst, sodass Ihre Speisekarte modern, übersichtlich und stimmig wirkt. Die individuelle Design-Anpassung ist im Komplettsystem enthalten. Persönliche Wünsche besprechen wir gemeinsam mit Ihnen.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Kann ich meine Speisekarte und Preise später ändern? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Ja. Änderungen an Preisen oder Gerichten lassen sich in Sekundenschnelle live schalten. Sollen nachträgliche Anpassungen oder Erweiterungen von unserem Team außerhalb des Wartungsvertrags umgesetzt werden, kosten diese 45 € pro Änderung. Wie das bei Ihnen konkret abläuft, klären wir gern persönlich.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Welche Funktionen bietet QRMenu Solutions? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><ul><li>Digitale Speisekarte per QR-Code</li><li>Bestellung direkt am Tisch</li><li>Kontaktloses Bezahlen (Apple Pay, Google Pay, Kreditkarte, PayPal)</li><li>Kellner-Rufsystem mit Tischnummer</li></ul><p>Welche Funktionen für Ihr Restaurant sinnvoll sind, besprechen wir in Ihrer individuellen Anfrage.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Wie läuft die Einrichtung meines Systems ab? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Sie senden uns eine unverbindliche Anfrage, wir melden uns bei Ihnen und stimmen alles Weitere mit Ihnen ab. Wir übernehmen die komplette Einrichtung: Design-Anpassung, Erstellung Ihrer digitalen Speisekarte und druckfertige QR-Codes für Ihre Tische. Den genauen Ablauf und Zeitplan besprechen wir individuell.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Was kostet das System? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Das Komplettsystem kostet einmalig 500 €. Darin enthalten sind die komplette Einrichtung, die individuelle Design-Anpassung, die druckfertige QR-Code-Erstellung und Ihre vollständige digitale Speisekarte.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Welche laufenden Kosten entstehen? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Für Betrieb und Betreuung fallen 70 € pro Monat an, Hosting ist dabei inklusive. Zusätzliche Anpassungen außerhalb des Wartungsvertrags berechnen wir mit 45 € pro Änderung – nur dann, wenn Sie sie wünschen.</p></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Was beinhaltet die monatliche Betreuung? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><ul><li>Zuverlässiger, laufender Systembetrieb</li><li>Priorisierter technischer Support</li><li>Regelmäßige Updates &amp; Kontrollen</li><li>Hosting inklusive</li></ul></div></div></div>
+            <div class="faq-item"><button class="faq-q" aria-expanded="false">Wie kann ich QRMenu Solutions für mein Restaurant anfragen? <i class="fas fa-plus"></i></button>
+                <div class="faq-a"><div><p>Ganz einfach über das Anfrageformular oder per E-Mail an <a href="mailto:qrmenusolutions1@gmail.com" style="color:var(--brand-color)">qrmenusolutions1@gmail.com</a>. Die Anfrage ist unverbindlich.</p><a href="#" class="btn-primary open-modal-btn">Jetzt unverbindlich anfragen</a></div></div></div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-cta fade-in">
+            <h2>Bereit für die digitale Revolution?</h2>
+            <p>Kontaktieren Sie uns unverbindlich und lassen Sie uns gemeinsam Ihr Restaurant nach vorne bringen.</p>
+            <a href="#" class="btn-primary open-modal-btn">Jetzt unverbindlich anfragen</a>
+            <div class="footer-contact">
+                <span><i class="fas fa-map-marker-alt brand-color"></i> Münster</span>
+                <a href="mailto:qrmenusolutions1@gmail.com"><i class="fas fa-envelope brand-color"></i> qrmenusolutions1@gmail.com</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 QRMenu Solutions. Alle Rechte vorbehalten.</p>
+            <div class="f-links"><a href="#">Impressum</a><a href="#">Datenschutz</a></div>
+        </div>
+    </footer>
+
+    <div id="contact-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <div class="modal-box" id="modal-box">
+            <div class="modal-close" id="close-modal-btn" role="button" aria-label="Schließen" tabindex="0">&times;</div>
+            <h3 id="modal-title">Unverbindliche Anfrage</h3>
+            <p>Lassen Sie uns wissen, wie wir Ihnen helfen können. Wir melden uns umgehend bei Ihnen!</p>
+
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="f-name">Ihr Name / Restaurant</label>
+                    <input id="f-name" type="text" placeholder="z.B. Restaurant Sonnenaufgang" required>
+                </div>
+                <div class="form-group">
+                    <label for="f-mail">E-Mail-Adresse</label>
+                    <input id="f-mail" type="email" placeholder="name@beispiel.de" required>
+                </div>
+                <div class="form-group">
+                    <label for="f-msg">Ihre Nachricht</label>
+                    <textarea id="f-msg" rows="4" placeholder="An welchem System haben Sie Interesse? Wie viele Tische nutzen Sie ca.?" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary" style="width: 100%; cursor: pointer;">Anfrage absenden</button>
+                <p class="form-hint">Unverbindlich &amp; kostenlos – wir antworten persönlich.</p>
+            </form>
+            <div class="form-success">
+                <i class="fas fa-circle-check"></i>
+                <h3>Vielen Dank!</h3>
+                <p style="margin-bottom:0">Ihre Anfrage wurde vorbereitet. Falls sich Ihr E-Mail-Programm nicht geöffnet hat, schreiben Sie uns direkt an <a href="mailto:qrmenusolutions1@gmail.com" style="color:var(--brand-color)">qrmenusolutions1@gmail.com</a>.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Intro-Bildschirm
+        window.addEventListener('load', () => {
+            setTimeout(() => document.getElementById('intro-screen').classList.add('hidden'), 1300);
+        });
+
+        // 2. Handy-Menü
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navMenu = document.getElementById('nav-menu');
+        mobileMenu.addEventListener('click', () => {
+            const open = navMenu.classList.toggle('active');
+            mobileMenu.setAttribute('aria-expanded', open);
+        });
+        navMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+            navMenu.classList.remove('active'); mobileMenu.setAttribute('aria-expanded', false);
+        }));
+
+        // 3. Features (Hero-Leiste und Detail-Leiste bleiben synchron)
+        function switchFeature(name) {
+            document.querySelectorAll('.feature-tab-content').forEach(t => t.classList.toggle('active', t.id === 'feature-' + name));
+            document.querySelectorAll('.icon-item').forEach(i => {
+                const on = i.dataset.feature === name;
+                i.classList.toggle('active', on);
+                i.setAttribute('aria-selected', on);
+                if (on && i.closest('.hero-content')) document.getElementById('preview-label').textContent = i.textContent.trim();
+            });
+        }
+        document.querySelectorAll('.icon-item').forEach(i => i.addEventListener('click', () => switchFeature(i.dataset.feature)));
+
+        // 4. Kontakt-Modal
+        const modal = document.getElementById('contact-modal');
+        const modalBox = document.getElementById('modal-box');
+        const form = document.getElementById('contact-form');
+        const closeModal = () => modal.classList.remove('open');
+        document.querySelectorAll('.open-modal-btn').forEach(btn => btn.addEventListener('click', e => {
+            e.preventDefault();
+            modalBox.classList.remove('sent');
+            modal.classList.add('open');
+            setTimeout(() => document.getElementById('f-name').focus(), 50);
+        }));
+        document.getElementById('close-modal-btn').addEventListener('click', closeModal);
+        modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+        document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+        // Formular: öffnet eine vorbereitete E-Mail an QRMenu Solutions
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            const name = document.getElementById('f-name').value.trim();
+            const mail = document.getElementById('f-mail').value.trim();
+            const msg = document.getElementById('f-msg').value.trim();
+            const subject = encodeURIComponent('Anfrage über die Website: ' + name);
+            const body = encodeURIComponent('Name / Restaurant: ' + name + '\nE-Mail: ' + mail + '\n\n' + msg);
+            window.location.href = 'mailto:qrmenusolutions1@gmail.com?subject=' + subject + '&body=' + body;
+            modalBox.classList.add('sent');
+            form.reset();
+        });
+
+        // 5. FAQ-Accordion (jeweils eine Antwort offen)
+        document.querySelectorAll('.faq-q').forEach(q => q.addEventListener('click', () => {
+            const item = q.parentElement, wasOpen = item.classList.contains('open');
+            document.querySelectorAll('.faq-item.open').forEach(o => { o.classList.remove('open'); o.firstElementChild.setAttribute('aria-expanded', false); });
+            if (!wasOpen) { item.classList.add('open'); q.setAttribute('aria-expanded', true); }
+        }));
+
+        // 6. Beispiel-Designs
+        const themes = [
+            { n: 'Gold', c: '#d8af4b', bg: '#0d0d0d', card: '#181818', text: '#f5f5f5', on: '#000', name: 'Restaurant Sonnenaufgang', tag: 'Modern · Elegant', items: [['Rinderfilet', '28,50 €'], ['Hausgemachte Pasta', '16,90 €'], ['Crème brûlée', '7,50 €']] },
+            { n: 'Trattoria', c: '#4f9d69', bg: '#f4efe4', card: '#ffffff', text: '#1f2a22', on: '#fff', name: 'Trattoria Verde', tag: 'Italienisch · Frisch', items: [['Pizza Margherita', '10,50 €'], ['Tagliatelle al Ragù', '14,90 €'], ['Tiramisu', '6,50 €']] },
+            { n: 'Sushi', c: '#e0443e', bg: '#111111', card: '#1d1d1d', text: '#ffffff', on: '#fff', name: 'Sakura Sushi', tag: 'Japanisch · Pur', items: [['Maki-Set (8 Stk.)', '9,90 €'], ['Lachs Nigiri', '7,50 €'], ['Matcha Eis', '5,50 €']] },
+            { n: 'Café', c: '#c8774a', bg: '#fbf3ea', card: '#ffffff', text: '#3a2a20', on: '#fff', name: 'Café Morgenrot', tag: 'Frühstück · Kuchen', items: [['Frühstücksteller', '11,90 €'], ['Flat White', '3,90 €'], ['Käsekuchen', '4,80 €']] }
+        ];
+        const chips = document.getElementById('theme-chips'), phone = document.getElementById('mini-phone');
+        function applyTheme(i) {
+            const t = themes[i];
+            phone.style.setProperty('--t-bg', t.bg); phone.style.setProperty('--t-card', t.card);
+            phone.style.setProperty('--t-accent', t.c); phone.style.setProperty('--t-text', t.text); phone.style.setProperty('--t-on', t.on);
+            document.getElementById('mp-name').textContent = t.name;
+            document.getElementById('mp-tag').textContent = t.tag;
+            document.getElementById('mp-items').innerHTML = t.items.map(x => '<div class="mini-item"><span>' + x[0] + '</span><b>' + x[1] + '</b></div>').join('') + '<div class="mini-btn">Bestellung ansehen</div>';
+            chips.querySelectorAll('.theme-chip').forEach((c, k) => c.classList.toggle('active', k === i));
+        }
+        themes.forEach((t, i) => {
+            const b = document.createElement('button');
+            b.className = 'theme-chip'; b.style.setProperty('--c', t.c);
+            b.innerHTML = '<i></i>' + t.n;
+            b.addEventListener('click', () => applyTheme(i));
+            chips.appendChild(b);
+        });
+        applyTheme(0);
+
+        // 7. Scroll-Animationen
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('appear'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+    </script>
+</body>
+</html>
